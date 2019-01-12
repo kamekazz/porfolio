@@ -10,6 +10,17 @@ class Iame extends Component {
     return (
       <div className="Iame">
 
+        <Slide direction="left" in={true} timeout={690}  mountOnEnter unmountOnExit >
+            <div className="react__posich" >
+                <div  className="react__posich--btn btn">
+                    <img className="react--icon" src="favicon.ico"  alt="sss"/>
+                    powered by react.js
+                </div>
+            </div>
+        </Slide>
+
+
+
         <video className="bg-video__content" autoPlay muted loop >
             <source src="ast/mp4/Aloha-Mundo.mp4" type="video/mp4" />
             <source src="ast/mp4/Aloha-Mundo.webm" type="video/webm" />
@@ -29,10 +40,12 @@ class Iame extends Component {
             </div>
         </Slide>
 
-
-        <div className="KeyboarIcon--posich" >
-            <KeyboarIcon className="KeyboarIcon"/>
-        </div>
+        <Slide direction="up" in={true} timeout={690}  mountOnEnter unmountOnExit >
+            <div className="KeyboarIcon--posich" >
+                <p className="KeyboarIcon--posich--p" >scroll down</p>
+                <KeyboarIcon className="KeyboarIcon"/>
+            </div>
+        </Slide>
             
 
       </div>
