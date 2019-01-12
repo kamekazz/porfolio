@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './src/App.scss';
 import Iame from './components/Iame';
 import Fullpage, { FullPageSections, FullpageSection } from '@ap.cx/react-fullpage'
+import AboutMe from './components/aboutMe';
 
 
 
@@ -14,9 +15,11 @@ class App extends Component {
           <Iame />
         </FullpageSection>
         <FullpageSection style={{
-          backgroundColor: 'coral',
+          backgroundColor: '#374B4A',
 
-        }}>2</FullpageSection>
+        }}>
+          <AboutMe />
+        </FullpageSection>
         <FullpageSection style={{
           backgroundColor: 'firebrick',
 
