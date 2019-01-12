@@ -59,6 +59,7 @@
 
         P{
             font-size: 2rem;
+            
         }
     }
 
@@ -172,6 +173,15 @@
     }
 }
 
+
+@keyframes aboutline20{
+    0%{
+        width: 0%; 
+        }
+    100%{
+        width: 15%;
+    }
+}
 @keyframes title{
     0%{
         

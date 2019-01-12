@@ -3,6 +3,7 @@ import './src/App.scss';
 import Iame from './components/Iame';
 import Fullpage, { FullPageSections, FullpageSection } from '@ap.cx/react-fullpage'
 import AboutMe from './components/aboutMe';
+import OutSkills from './components/OutSkills';
 
 
 
@@ -21,9 +22,10 @@ class App extends Component {
           <AboutMe />
         </FullpageSection>
         <FullpageSection style={{
-          backgroundColor: 'firebrick',
-
-        }}>3</FullpageSection>
+          backgroundColor: '#374B4A',
+        }}>
+        <OutSkills />
+        </FullpageSection>
 
       </FullPageSections>
 
