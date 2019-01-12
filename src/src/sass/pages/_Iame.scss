@@ -1,0 +1,71 @@
+.Iame{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 4rem;
+
+    .bg-video__content{
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        object-fit: cover
+    }
+
+    &__text{
+        font-size: 4rem;
+        position: absolute;
+        top:60%;
+        line-height: 6rem;
+        color: $color-grey-light-1;
+     
+
+        &__header--top{
+            display: block;
+
+        }
+
+        &__header--bot{
+            display: block;
+            
+        }
+
+        &__header--top--name{
+            color: $color-primary
+        }
+    }
+
+    .gettouch--posich{
+        position: absolute;
+        top:80%;
+        left :3rem;
+    }
+
+    .gettouch{
+       background-color: $color-secondary-dark;
+       color: $color-grey-light-1;
+       font-weight: 700;
+    }
+
+    .KeyboarIcon{
+        font-size: 10rem;
+        color: $color-secondary-dark;
+    }
+
+    .KeyboarIcon--posich{
+        position: absolute;
+        top:97%;
+        left :50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    
+
+
+
+}
+
