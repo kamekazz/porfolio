@@ -1,0 +1,215 @@
+.MyProjects{
+    position: relative;
+    color: $color-grey-light-1;
+    width: 100vw;
+    height: 100vh;
+
+
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%  ;
+    grid-gap: 1rem;
+
+
+
+    .title{
+        font-size: 10rem;
+        font-weight: 900;
+        animation: title 8s forwards 3s ease-out;
+
+        grid-column-start: 6;
+        grid-column-end: 12;
+        grid-row-start: 9;
+        grid-row-end: 10;
+    
+        align-self: end;
+    }
+
+
+
+    .MyProjects__shape--1 {
+        width: 22rem;
+        height: 22rem;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        align-self: center;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 5;
+    }
+
+    .MyProjects__shape--2 {
+        width: 22rem;
+        height: 22rem;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        align-self: center;
+        justify-self: end;
+        grid-column-start: 6;
+        grid-column-end: 8;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        
+    }
+
+    .MyProjects__h3--1{
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        place-self: center;
+        color: $color-secondary-light;
+
+        font-size: 4.5rem;
+    }
+
+    .MyProjects__h3--2{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        color: $color-secondary-light;
+        place-self: center;
+
+        font-size: 4.5rem;
+    }
+
+    
+   
+    
+
+
+
+    &__img {
+        height: 100%;
+        backface-visibility: hidden;
+        transition: all .5s;
+    }
+
+
+
+    &__text {
+        grid-column-start: 5;
+        grid-column-end: 8;
+        grid-row-start: 3;
+        grid-row-end: 5;
+
+        font-size: 1.2rem;
+    }
+
+    &__text-2 {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 6;
+        grid-row-end: 7;
+
+        font-size: 1.2rem;
+    }
+
+    &__tec {
+        grid-column-start: 5;
+        grid-column-end: 8;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        align-self: end;
+
+        *{
+            font-size: 1rem;
+            margin: .5rem;
+        }
+    }
+
+    &__tec-2 {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        align-self: end;
+
+        *{
+            font-size: 1rem;
+            margin: .5rem;
+        }
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 5;
+    }
+
+    .MyProjects__shape--1:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    .MyProjects__shape--1:hover &__img {
+        transform: scale(1.3);
+        filter: blur(3px) brightness(80%);
+    }
+
+    .MyProjects__shape--2:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    .MyProjects__shape--2:hover &__img {
+        transform: scale(1.3);
+        filter: blur(3px) brightness(80%);
+    }
+
+    .iconlist{
+        grid-column-start: 7;
+        grid-column-end: 8;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        align-self: center;
+        display: flex;
+        justify-content:space-around;
+
+
+        i{
+            font-size: 3rem
+        }
+    }
+
+    .iconlist--2{
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 6;
+
+        align-self: center;
+        display: flex;
+        justify-content:space-around;
+
+
+        i{
+            font-size: 3rem
+        }
+    }
+
+
+
+    .inportan{
+        color:$color-secondary-light;
+    }
+}

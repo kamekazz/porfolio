@@ -4,6 +4,7 @@ import Iame from './components/Iame';
 import Fullpage, { FullPageSections, FullpageSection } from '@ap.cx/react-fullpage'
 import AboutMe from './components/aboutMe';
 import OutSkills from './components/OutSkills';
+import  MyProjects  from './components/MyProjects';
 
 
 
@@ -28,9 +29,8 @@ class App extends Component {
         </FullpageSection>
         <FullpageSection style={{
           backgroundColor: '#374B4A',
-
         }}>
-          
+          <MyProjects />
         </FullpageSection>
       </FullPageSections>
 
