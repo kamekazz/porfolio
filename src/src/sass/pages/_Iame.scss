@@ -21,7 +21,9 @@
         top:60%;
         line-height: 6rem;
         color: $color-grey-light-1;
-     
+        @media only screen and (max-width: 425px) {
+            top:15%;
+        }
 
         &__header--top{
             display: block;
@@ -41,8 +43,11 @@
     .gettouch--posich{
         position: absolute;
         top:85%;
-        left :3rem;
-
+        left :10%;
+        @media only screen and (max-width: 425px) {
+            top:70%;
+            left :0;
+        }
 
     }
 
@@ -69,7 +74,7 @@
     .KeyboarIcon--posich{
         position: absolute;
         bottom:1%;
-        left :50%;
+        left :37%;
         transform: translate(-50%, -50%);
   
         &--p{
@@ -93,7 +98,9 @@
         top:10%;
         right:0%;
         transform: translate(-50%, -50%);
-
+        @media only screen and (max-width: 425px) {
+            top:0%;
+        }
     
 
 
