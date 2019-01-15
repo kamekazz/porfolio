@@ -26,7 +26,12 @@ class App extends Component {
         }}>
         <OutSkills />
         </FullpageSection>
+        <FullpageSection style={{
+          backgroundColor: '#374B4A',
 
+        }}>
+          
+        </FullpageSection>
       </FullPageSections>
 
     </Fullpage>
