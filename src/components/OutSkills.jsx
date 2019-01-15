@@ -3,7 +3,7 @@ import Slide from '@material-ui/core/Slide';
 import WorkIcon from '@material-ui/icons/Work';
 import TableSkills from './TableSkills';
 import 'animate.css'
-
+import KeyboarIcon from '@material-ui/icons/KeyboardArrowDown';
  class OutSkills extends Component {
   render() {
     return (
@@ -62,6 +62,13 @@ import 'animate.css'
 
         <Slide direction="right" in={true} timeout={3000} >
             <div className="s2-bg"></div>
+        </Slide>
+        
+        <Slide direction="up" in={true} timeout={1000}  mountOnEnter unmountOnExit >
+            <div className="aboutMe--posich" >
+                <p className="aboutMe--posich--p" >scroll down</p>
+                <KeyboarIcon className="KeyboarIcon"/>
+            </div>
         </Slide>
       </div>
     )

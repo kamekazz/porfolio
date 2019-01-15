@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import Slide from '@material-ui/core/Slide';
 import Chip from '@material-ui/core/Chip';
-
+import KeyboarIcon from '@material-ui/icons/KeyboardArrowDown';
 import Fab from '@material-ui/core/Fab';
 
 import Icon from '@material-ui/core/Icon';
@@ -18,10 +18,15 @@ export class MyProjects extends Component {
     }, 1500);
   }
 
+  activet =()=>{
+    console.log('goo2');
+  }
+
 
   render() {
     return (
-      <div className="MyProjects">
+      <div onScroll={ this.activet} className="MyProjects">
+
 
         <figure className="MyProjects__shape--1">
             <img src="ast/img/mony.jpg" alt="Person on a tour" className="MyProjects__img" />
