@@ -5,7 +5,7 @@ import Slide from '@material-ui/core/Slide';
 export default class aboutMe extends Component {
   render() {
     return (
-      <div className="aboutMe" >
+      <div id="aboutMe" className="aboutMe" >
         <Slide direction="right" in={true} timeout={1000} >
             <figure className="aboutMe__shape">
                 <img src="ast/img/me.jpg" alt="Person on a tour" className="aboutMe__img" />
@@ -38,7 +38,9 @@ export default class aboutMe extends Component {
         </div>
         </Slide>
         <div className="Donwload__position">
-            <div className="btn" >Download PDF</div>
+        <a href="https://docs.google.com/document/d/18T-h-v1xDOcscdzE0l0d0c9IShlWbbZaAYtLo12iLTE/edit?usp=sharing"rel="noopener noreferrer" target="_blank">
+        <div className="btn" >Download PDF</div>
+        </a>
         </div>
 
         <div className ="line2"/>

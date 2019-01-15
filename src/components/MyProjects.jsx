@@ -11,6 +11,13 @@ import Icon from '@material-ui/core/Icon';
 
 export class MyProjects extends Component {
 
+  hp_doleClik = () =>{
+    this.props.scrollToMyRef()
+    setTimeout(() => {
+      this.props.scrollToMyRef()
+    }, 1500);
+  }
+
 
   render() {
     return (
@@ -39,12 +46,12 @@ export class MyProjects extends Component {
         
         <div className="iconlist">
           <a href="https://github.com/kamekazz/fiobook-cli"rel="noopener noreferrer" target="_blank"><Fab className="fab" color="primary"  >
-              <i class="fab fa-github "></i>
+              <i className="fab fa-github "></i>
             </Fab>
           </a>
 
           <a href="https://colbook-0818.firebaseapp.com/login"rel="noopener noreferrer" target="_blank"><Fab className="fab" color="primary"  >
-          <i class="fas fa-link"></i>
+          <i className="fas fa-link"></i>
             </Fab>
           </a>
         </div>
@@ -57,12 +64,12 @@ export class MyProjects extends Component {
 
         <div className="iconlist--2">
           <a href="https://github.com/kamekazz/viva-cli"rel="noopener noreferrer" target="_blank"><Fab className="fab" color="primary"  >
-              <i class="fab fa-github "></i>
+              <i className="fab fa-github "></i>
             </Fab>
           </a>
 
           <a href="https://viva-la-musica.firebaseapp.com/signup"rel="noopener noreferrer" target="_blank"><Fab className="fab" color="primary"  >
-          <i class="fas fa-link"></i>
+          <i className="fas fa-link"></i>
             </Fab>
           </a>
         </div>
@@ -82,7 +89,22 @@ export class MyProjects extends Component {
 
 
 
+        <div className="btn--posich" >
+            <div onClick={this.hp_doleClik}  className="gettouch btn">get in touch</div>
+        </div>
 
+        
+          <div className="btn--posich-2" >
+            <a href="https://github.com/kamekazz"rel="noopener noreferrer" target="_blank">
+              <div  className="gettouch btn"><i className="fab fa-github "></i> more Projects</div>
+            </a>
+          </div> 
+      
+        <div className="btn--posich-3" >
+        <a href="https://codepen.io/kamekazz/"rel="noopener noreferrer" target="_blank">
+            <div  className="gettouch btn"><i className="fab fa-codepen"></i> codepen</div>
+        </a>
+        </div> 
 
        <Slide direction="left" in={true} timeout={1000} >
         <div className="title">My Projects</div>

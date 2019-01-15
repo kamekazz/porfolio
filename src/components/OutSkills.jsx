@@ -50,12 +50,14 @@ import 'animate.css'
             <TableSkills />
         </div>
 
-        
+        <div className="btn--posich" >
+            <div onClick={this.props.scrollToMyRef}   className="gettouch btn">get in touch</div>
+        </div>
 
 
 
         <Slide direction="left" in={true} timeout={1000} >
-        <div className="title">OUR SKILLS</div>
+        <div className="title">My SKILLS</div>
         </Slide>
 
         <Slide direction="right" in={true} timeout={3000} >

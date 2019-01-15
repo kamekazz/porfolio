@@ -212,4 +212,48 @@
     .inportan{
         color:$color-secondary-light;
     }
+
+
+    
+    .btn--posich{
+        grid-column-start: 8;
+        grid-column-end: 10;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .btn--posich-2{
+        grid-column-start: 8;
+        grid-column-end: 10;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .btn--posich-3{
+        grid-column-start: 8;
+        grid-column-end: 10;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .gettouch{
+        color: $color-grey-light-1;
+        background-color: $color-secondary-dark;
+        padding-left:5rem; 
+        &:hover{
+            background-color: $color-secondary-light;
+        }
+
+        &:active{
+            color: $color-primary;
+        }
+
+        width: 25rem;
+    }
 }

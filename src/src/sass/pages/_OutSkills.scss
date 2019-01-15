@@ -10,6 +10,27 @@
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%  ;
     grid-gap: 1rem;
 
+    .btn--posich{
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        align-self: center;
+        
+        .gettouch{
+            color: $color-grey-light-1;
+            background-color: $color-secondary-dark;
+            padding-left:5rem; 
+            &:hover{
+                background-color: $color-secondary-light;
+            }
+
+            &:active{
+                color: $color-primary;
+            }
+        }
+    }
+
     .skills{
         grid-column-start: 2;
         grid-column-end: 6;
