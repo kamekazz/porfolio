@@ -40,7 +40,7 @@ export default class aboutMe extends Component {
                 <li>Name : Manuel Taveras</li>
                 <li>Age : 34</li>
                 <li>Address : New York, USA</li>
-                <li>Phone : +0123 123 456 789</li>
+                <li>Phone :  978 706-3407</li>
                 <li>Email : Taveras78@gmail.com</li>
             </ul>
         </div>

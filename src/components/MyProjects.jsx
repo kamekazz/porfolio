@@ -4,10 +4,10 @@ import { connect } from 'react-redux'
 
 import Slide from '@material-ui/core/Slide';
 import Chip from '@material-ui/core/Chip';
-import KeyboarIcon from '@material-ui/icons/KeyboardArrowDown';
+
 import Fab from '@material-ui/core/Fab';
 
-import Icon from '@material-ui/core/Icon';
+
 
 export class MyProjects extends Component {
 
@@ -81,7 +81,7 @@ export class MyProjects extends Component {
 
         <div className="MyProjects__text-2">
             <p>
-            I created this app for a mall It gives the ability of every guess to add music to a playlist And be able to vote for the next song, This is not the original app I changed a couple things to be suitable for the web .
+            I created this app for a mall It gives the ability of every guess to add music to a playlist And be able to vote for the next song, This is not the original app I changed a couple things to be suitable for the web .To demo this app please use this password: <span className="inportan">demo</span>  and user account name: <span className="inportan">demo</span> .
             </p>
         </div>
 

@@ -36,6 +36,11 @@
             grid-row-start: 8;
             grid-row-end: 9;
         }
+        @media only screen and (max-width: 348px) {
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+
         
         .gettouch{
             color: $color-grey-light-1;
@@ -54,12 +59,12 @@
 
     .skills{
         grid-column-start: 2;
-        grid-column-end: 6;
+        grid-column-end: 12;
         grid-row-start: 1;
         grid-row-end: 10;
         padding: 3rem;
         display: grid;
-        grid-template-columns: 1fr  1fr 1fr 1fr ;
+        grid-template-columns: 1fr  1fr 1fr 1fr 1fr ;
         grid-template-rows: 20%  20%   20%   20%  20% ;
         grid-gap: 1rem;
         @media only screen and (max-width: 968px) {
@@ -70,11 +75,17 @@
             grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%  ;
         }
 
+
+
         .header{
             grid-column-start: 1;
-            grid-column-end: 5;
+            grid-column-end: 3;
             grid-row-start: 1;
-            grid-row-end: 2;
+            grid-row-end: 3;
+            @media only screen and (max-width: 348px) {
+                grid-column-start: 1;
+                grid-column-end: 6;
+            }
             h4{
                 font-size: 2rem;
                 line-height: 3rem;
@@ -94,6 +105,10 @@
             grid-row-end: 3;
             @media only screen and (max-width: 411px) {
                 grid-row-start: 4;
+                grid-row-end: 9;
+            }
+            @media only screen and (max-width: 348px) {
+                grid-row-start: 3;
                 grid-row-end: 9;
             }
             h4{
@@ -132,7 +147,9 @@
         background-image:  linear-gradient(to right, $color-primary-light, $color-primary-dark);
         opacity: 1;
         padding: 3rem;
-       
+        @media only screen and (max-width: 348px) {
+            display: none;
+        }
     }
 
 
@@ -185,6 +202,10 @@
         }
         @media only screen and (max-width: 411px) {
             font-size: 4rem;   
+        }
+        @media only screen and (max-width: 348px) {
+            font-size: 2.5rem;   
+            
         }
     }
 
