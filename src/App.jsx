@@ -28,6 +28,7 @@ class App extends Component {
   render() {
     return (
       <Suspense fallback={<Loding />}>
+          <Loding />
           <Fullpage>
           <FullPageSections>
             <FullpageSection>
@@ -52,7 +53,7 @@ class App extends Component {
           </FullPageSections>
         </Fullpage>
       </Suspense>
-
+   
     );
   }
 }
