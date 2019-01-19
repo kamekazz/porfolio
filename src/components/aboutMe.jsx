@@ -5,14 +5,13 @@ export default class aboutMe extends Component {
 
     state={
         onViw:true,
-        card:''
+        card:'',
+        card2:''
     }
 
 
     componentDidMount(){
-        setInterval(() => {
-            console.log(this.state)
-        }, 1000);
+
     }
 
     campioCard =()=>{
@@ -31,11 +30,16 @@ export default class aboutMe extends Component {
                 <img src="ast/img/me.jpg" alt="Person on a tour" className="aboutMe__img" />
             </figure>
         {/* </Slide> */}
-        <div  className={`aboutMe__shape2  ${this.state.card}`} onMouseOut={()=> this.setState({card:'0'})} >
-            <div onMouseOver={()=> this.setState({card:'ul'})} className="aboutMe__shape2--1"></div>
-            <div onMouseOver={()=> this.setState({card:'ur'})}  className="aboutMe__shape2--2"></div>
-            <div onMouseOver={()=> this.setState({card:'dl'})}  className="aboutMe__shape2--3"></div>
-            <div onMouseOver={()=> this.setState({card:'dr'})}  className="aboutMe__shape2--4"></div>
+        <div  className={`aboutMe__shape2  ${this.state.card2}`} onMouseOut={()=> this.setState({card:'',card2:''})} >
+            <div onMouseOver={()=> this.setState({card:'ul',card2:'ul2'})}  className="aboutMe__shape2--1"></div>
+            <div onMouseOver={()=> this.setState({card:'uu',card2:'uu2'})}  className="aboutMe__shape2--2"></div>
+            <div onMouseOver={()=> this.setState({card:'ur',card2:'ur2'})}  className="aboutMe__shape2--3"></div>
+            <div onMouseOver={()=> this.setState({card:'ll',card2:'ll2'})}  className="aboutMe__shape2--4"></div>
+            <div onMouseOver={()=> this.setState({card:'oo',card2:'oo2'})}  className="aboutMe__shape2--5"></div>
+            <div onMouseOver={()=> this.setState({card:'rr',card2:'rr2'})}  className="aboutMe__shape2--6"></div>
+            <div onMouseOver={()=> this.setState({card:'dl',card2:'dl2'})}  className="aboutMe__shape2--7"></div>
+            <div onMouseOver={()=> this.setState({card:'dd',card2:'dd2'})}  className="aboutMe__shape2--8"></div>
+            <div onMouseOver={()=> this.setState({card:'dr',card2:'dr2'})}  className="aboutMe__shape2--9"></div>
         </div>
         <Slide direction="left" in={onViw} timeout={1000} >
         <div className="heder__text">
