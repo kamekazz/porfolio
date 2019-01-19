@@ -285,15 +285,18 @@
         justify-self: end;
         display: flex; 
       
+      
         @media only screen and (max-width: 619px) {
             justify-content: center;
             align-self: end;
+            justify-self: center;
         }
        
         .title{
             font-weight: 900;
             font-size: 14rem;
             margin-right: 5rem;
+
             @media only screen and (max-width: 619px) {
              margin-right: 0rem;
              font-size: 7rem;
