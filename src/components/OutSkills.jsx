@@ -56,20 +56,19 @@ import KeyboarIcon from '@material-ui/icons/KeyboardArrowDown';
 
 
 
+     
+
         <Slide direction="left" in={true} timeout={1000} >
-        <div className="title">My SKILLS</div>
+          <div className="title-p">
+            <div className="title">My SKILLS</div>
+          </div>
         </Slide>
 
         <Slide direction="right" in={true} timeout={3000} >
             <div className="s2-bg"></div>
         </Slide>
         
-        <Slide direction="up" in={true} timeout={1000}  mountOnEnter unmountOnExit >
-            <div className="aboutMe--posich" >
-                <p className="aboutMe--posich--p" >scroll down</p>
-                <KeyboarIcon className="KeyboarIcon"/>
-            </div>
-        </Slide>
+
       </div>
     )
   }

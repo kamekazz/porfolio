@@ -40,12 +40,7 @@ class Iame extends Component {
             </div>
         </Slide>
 
-        <Slide direction="up" in={true} timeout={1000}  mountOnEnter unmountOnExit >
-            <div className="KeyboarIcon--posich" >
-                <p className="KeyboarIcon--posich--p" >scroll down</p>
-                <KeyboarIcon className="KeyboarIcon"/>
-            </div>
-        </Slide>
+
             
 
       </div>

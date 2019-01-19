@@ -106,13 +106,15 @@ export class MyProjects extends Component {
           </div> 
       
         <div className="btn--posich-3" >
-        <a href="https://codepen.io/kamekazz/"rel="noopener noreferrer" target="_blank">
+        <a href="https://codesandbox.io/u/kamekazz"rel="noopener noreferrer" target="_blank">
             <div  className="gettouch btn"><i className="fab fa-codepen"></i> codepen</div>
         </a>
         </div> 
 
        <Slide direction="left" in={true} timeout={1000} >
-        <div className="title">My Projects</div>
+          <div className="title-p">
+            <div className="title">My Projects</div>
+          </div>
         </Slide>
 
         <Slide direction="right" in={true} timeout={3000} >

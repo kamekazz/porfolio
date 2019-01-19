@@ -58,17 +58,17 @@ export default class aboutMe extends Component {
         </div>
 
         <div className ="line2"/>
-        <Slide direction="left" in={onViw} timeout={1000} >
-        <div className="title">About Me</div>
+
+
+        <Slide direction="left" in={true} timeout={1000} >
+        <div className="title-p">
+            <div className="title">About Me</div>
+        </div>
         </Slide>
+
+
         <Slide direction="right" in={onViw} timeout={3000} >
             <div className="s2-bg"></div>
-        </Slide>
-        <Slide direction="up" in={true} timeout={1000}  mountOnEnter unmountOnExit >
-            <div className="aboutMe--posich" >
-                <p className="aboutMe--posich--p" >scroll down</p>
-                <KeyboarIcon className="KeyboarIcon"/>
-            </div>
         </Slide>
       </div>
 
