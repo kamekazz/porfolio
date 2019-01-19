@@ -4,25 +4,39 @@ import Slide from '@material-ui/core/Slide';
 export default class aboutMe extends Component {
 
     state={
-        onViw:true
+        onViw:true,
+        card:''
     }
 
 
+    componentDidMount(){
+        setInterval(() => {
+            console.log(this.state)
+        }, 1000);
+    }
 
-
+    campioCard =()=>{
+        this.setState({
+            card:' u'
+        })
+    }
     
   render() {
-
     const onViw = this.state.onViw
     return (
   
       <div id="aboutMe" className="aboutMe" >
-        <Slide direction="right" in={onViw} timeout={1000} >
-            <figure className="aboutMe__shape">
+        {/* <Slide direction="right" in={onViw} timeout={1000} > */}
+            <figure className={`aboutMe__shape  ${this.state.card}`}>
                 <img src="ast/img/me.jpg" alt="Person on a tour" className="aboutMe__img" />
-                <figcaption className="aboutMe__caption">Mary Smith</figcaption>
             </figure>
-        </Slide>
+        {/* </Slide> */}
+        <div  className={`aboutMe__shape2  ${this.state.card}`} onMouseOut={()=> this.setState({card:'0'})} >
+            <div onMouseOver={()=> this.setState({card:'ul'})} className="aboutMe__shape2--1"></div>
+            <div onMouseOver={()=> this.setState({card:'ur'})}  className="aboutMe__shape2--2"></div>
+            <div onMouseOver={()=> this.setState({card:'dl'})}  className="aboutMe__shape2--3"></div>
+            <div onMouseOver={()=> this.setState({card:'dr'})}  className="aboutMe__shape2--4"></div>
+        </div>
         <Slide direction="left" in={onViw} timeout={1000} >
         <div className="heder__text">
             <h3 className="heder__text--h3">About Me</h3>

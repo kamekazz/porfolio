@@ -14,14 +14,10 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.timer()
+
   }
 
-  timer=()=>{
-    setTimeout(() => {
-      console.log('object')
-    }, 5000);
-  }
+
 
   scrollToMyRef = () => {  
     window.scrollTo({

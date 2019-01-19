@@ -31,6 +31,7 @@
         grid-row-end: 10;
         justify-self: end;
         display: flex; 
+        align-self: end;
       
         @media only screen and (max-width: 1400px) {
             grid-row-start: 8;
