@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import Slide from '@material-ui/core/Slide';
-import KeyboarIcon from '@material-ui/icons/KeyboardArrowDown';
-
-
 
 export default class aboutMe extends Component {
 

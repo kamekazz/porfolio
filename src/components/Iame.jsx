@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Slide from '@material-ui/core/Slide';
-import KeyboarIcon from '@material-ui/icons/KeyboardArrowDown';
 // import { connect } from 'react-redux'
 
 class Iame extends Component {

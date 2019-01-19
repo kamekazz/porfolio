@@ -3,12 +3,12 @@
     color: $color-grey-light-1;
     width: 100vw;
     height: 100vh;
-
-
     display: grid;
     grid-template-columns: 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%  ;
     grid-gap: 1rem;
+
+    font-size: 100%;
 
     @media only screen and (max-width: 1607px) {
         grid-template-columns: 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -19,14 +19,14 @@
       
     }
     @media only screen and (max-width: 800px) {
-        padding: 4rem;
+        padding:  4rem  2rem; 
     }
 
 
     .title-p{
         animation: title 8s forwards 3s ease-out;
         grid-column-start: 1;
-        grid-column-end: 12;
+        grid-column-end: 8;
         grid-row-start: 7;
         grid-row-end: 10;
         justify-self: end;
@@ -128,6 +128,10 @@
             grid-column-start: 1;
             grid-column-end: 6;
         }
+        @media only screen and (max-width: 414px) {
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
     }
 
     .MyProjects__h3--2{
@@ -167,7 +171,7 @@
         grid-row-start: 3;
         grid-row-end: 5;
 
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         @media only screen and (max-width: 1607px) {
             grid-column-start: 4;
             grid-column-end: 7;
@@ -175,6 +179,11 @@
         @media only screen and (max-width: 654px) {
             grid-column-start: 1;
             grid-column-end: 8;
+        }
+        @media only screen and (max-width: 414px) {
+            grid-column-start: 1;
+            grid-column-end: 8;
+            grid-row: 2 /4;
         }
     }
 
@@ -184,7 +193,7 @@
         grid-row-start: 6;
         grid-row-end: 7;
 
-        font-size: 1.2rem;
+        font-size: 1.5rem;
 
         @media only screen and (max-width: 1607px) {
             grid-column-start: 2;
@@ -236,6 +245,11 @@
         @media only screen and (max-width: 654px) {
             grid-column-start: 1;
             grid-column-end: 8;
+        }
+        @media only screen and (max-width: 414px) {
+            grid-row-start: 8;
+            grid-row-end: 9;
+            align-self: start;
         }
         *{
             font-size: 1rem;
@@ -301,6 +315,14 @@
             grid-column-end: 8;
         }
 
+        @media only screen and (max-width: 414px) {
+            grid-row-start: 1;
+            grid-row-end: 2; 
+            grid-column-start: 5;
+            grid-column-end: 8;
+        }
+
+
         i{
             font-size: 3rem
         }
@@ -321,6 +343,10 @@
         }
         @media only screen and (max-width: 654px) {
             grid-column-start: 6;
+            grid-column-end: 8;
+        }
+        @media only screen and (max-width: 414px) {
+            grid-column-start: 5;
             grid-column-end: 8;
         }
 

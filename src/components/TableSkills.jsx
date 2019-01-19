@@ -7,9 +7,9 @@ import LinearProgress from '@material-ui/core/LinearProgress';
        
             <div className="framwork">
                 <h3>Node.JS</h3>
-                <LinearProgress color="secondary" variant="buffer" value={95} />
-                <LinearProgress color="secondary" variant="buffer" value={95} />
-                <LinearProgress color="secondary" variant="buffer" value={95} />
+                <LinearProgress color="secondary" variant="determinate" value={95} />
+                <LinearProgress color="secondary" variant="determinate"value={95} />
+                <LinearProgress color="secondary" variant="determinate"value={95} />
             </div>
 
             <div className="framwork">

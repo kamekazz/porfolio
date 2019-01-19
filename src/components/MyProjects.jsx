@@ -73,7 +73,7 @@ export class MyProjects extends Component {
             </Fab>
           </a>
 
-          <a href="https://viva-la-musica.firebaseapp.com/signup"rel="noopener noreferrer" target="_blank"><Fab className="fab" color="primary"  >
+          <a href="https://viva-la-musica.firebaseapp.com/signin"rel="noopener noreferrer" target="_blank"><Fab className="fab" color="primary"  >
           <i className="fas fa-link"></i>
             </Fab>
           </a>

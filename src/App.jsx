@@ -1,11 +1,9 @@
 import React, { Component, lazy,Suspense } from 'react';
 import './src/App.scss';
-import Iame from './components/Iame';
-import Fullpage, { FullPageSections, FullpageSection } from '@ap.cx/react-fullpage'
-import AboutMe from './components/aboutMe';
-import OutSkills from './components/OutSkills';
-import  MyProjects  from './components/MyProjects';
+
 import Loding from './components/Loding';
+
+const App1 = lazy(()=>  import('./App.1'))
 
 
 
@@ -15,6 +13,16 @@ class App extends Component {
     this.myRef = React.createRef()   // Create a ref object 
   }
 
+  componentDidMount(){
+    this.timer()
+  }
+
+  timer=()=>{
+    setTimeout(() => {
+      console.log('object')
+    }, 5000);
+  }
+
   scrollToMyRef = () => {  
     window.scrollTo({
       top:this.myRef.current.offsetTop,  
@@ -22,37 +30,14 @@ class App extends Component {
     })
   }
 
-
-
-
   render() {
     return (
-      <Suspense fallback={<Loding />}>
-          <Loding />
-          <Fullpage>
-          <FullPageSections>
-            <FullpageSection>
-              <Iame  scrollToMyRef={this.scrollToMyRef}   />
-              <div ref={this.myRef}></div>
-            </FullpageSection >
-            <FullpageSection style={{
-              backgroundColor: '#374B4A',
-            }}>
-              <AboutMe  />
-            </FullpageSection>
-            <FullpageSection style={{
-              backgroundColor: '#374B4A',
-            }}>
-            <OutSkills  scrollToMyRef={this.scrollToMyRef}   />
-            </FullpageSection>
-            <FullpageSection style={{
-              backgroundColor: '#374B4A',
-            }}>
-              <MyProjects scrollToMyRef={this.scrollToMyRef} />
-            </FullpageSection>
-          </FullPageSections>
-        </Fullpage>
-      </Suspense>
+      <div>
+        <Loding />
+        <Suspense fallback={<Loding />}>
+            <App1 />
+        </Suspense>
+      </div>
     );
   }
 }

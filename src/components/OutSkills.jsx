@@ -3,7 +3,7 @@ import Slide from '@material-ui/core/Slide';
 import WorkIcon from '@material-ui/icons/Work';
 import TableSkills from './TableSkills';
 import 'animate.css'
-import KeyboarIcon from '@material-ui/icons/KeyboardArrowDown';
+
  class OutSkills extends Component {
   render() {
     return (
