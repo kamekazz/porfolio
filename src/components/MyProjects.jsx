@@ -95,7 +95,9 @@ export class MyProjects extends Component {
 
 
         <div className="btn--posich" >
-            <div onClick={this.hp_doleClik}  className="gettouch btn">get in touch</div>
+        <a href="https://codepen.io/kamekazz/pens/popular/"rel="noopener noreferrer" target="_blank">
+            <div  className="gettouch btn"><i className="fab fa-codepen"></i> codepen</div>
+        </a>
         </div>
 
         
@@ -107,7 +109,7 @@ export class MyProjects extends Component {
       
         <div className="btn--posich-3" >
         <a href="https://codesandbox.io/u/kamekazz"rel="noopener noreferrer" target="_blank">
-            <div  className="gettouch btn"><i className="fab fa-codepen"></i> codepen</div>
+            <div  className="gettouch btn"><i className="fab fa-codepen"></i> codesandbox</div>
         </a>
         </div> 
 
