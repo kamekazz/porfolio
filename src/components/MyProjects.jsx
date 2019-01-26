@@ -36,7 +36,7 @@ export class MyProjects extends Component {
         <div className="MyProjects__text">
             <p>
             Is the Dominican Republic most of the people use credit and pay once a month so I created this  PWA app to help small business manage account instead of writing everything in aNotebook .
-            To use and demo this app please use this password: <span className="inportan">123456</span>  and user account name: <span className="inportan">TAVERAS78@GMAIL.COM</span> .
+            To use and demo this app please use this password:  <span className="inportan">123456</span>  and user account name: <span className="inportan">TAVERAS78@GMAIL.COM</span> .
             </p>
         </div>
    
