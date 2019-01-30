@@ -29,7 +29,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Loding />
         <Suspense fallback={<Loding />}>
             <App1 />
         </Suspense>

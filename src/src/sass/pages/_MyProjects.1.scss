@@ -1,0 +1,89 @@
+.MyProjects1{
+    position: relative;
+    color: $color-grey-light-1;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12,1fr) ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "bg2 bg2 . . . . . . . . . ."
+      "bg2 bg2 . . . . . . . . . ."
+      "bg2 bg2 . . . . . . . . . ."
+      
+    ;
+
+
+
+    .title-p{
+        grid-area: title-p;
+        animation: title 8s forwards 3s ease-out;
+
+    
+        .title{
+            font-weight: 900;
+            font-size: 14rem;
+            margin-right: 5rem;
+        }
+    }
+
+
+
+
+
+
+
+    .MyProjects__h3--1{
+        grid-area: h3;
+
+        line-height: 4.6rem;
+        place-self: center;
+        color: $color-secondary-light;
+
+        font-size: 4.5rem;
+
+    }
+
+
+    &__text {
+        grid-area: ptext;
+
+
+    }
+    .btn--posich{
+        grid-area: btn;
+    }
+
+    .btn--posich-2{
+        grid-area: btn2;
+
+    }
+
+    .btn--posich-3{
+        grid-area: btn3;
+
+    }
+
+    .gettouch{
+        color: $color-grey-light-1;
+        background-color: $color-secondary-dark;
+        padding-left:5rem; 
+        &:hover{
+            background-color: $color-secondary-light;
+        }
+
+        &:active{
+            color: $color-primary;
+        }
+
+        width: 25rem;
+    }
+
+    .s2-bg{
+        grid-area: bg2;
+        background-color: #526760;
+        @media only screen and (max-width: 1607px) {
+            display: none;
+        }
+    }
+}

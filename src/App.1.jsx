@@ -5,6 +5,7 @@ import Fullpage, { FullPageSections, FullpageSection } from '@ap.cx/react-fullpa
 import AboutMe from './components/aboutMe';
 import OutSkills from './components/OutSkills';
 import  MyProjects  from './components/MyProjects';
+import  MyProjects1  from './components/MyProjects.1';
 
 
 
@@ -28,29 +29,12 @@ class App extends Component {
   render() {
     return (
       <div>
-          <Fullpage>
-          <FullPageSections>
-            <FullpageSection>
-              <Iame  scrollToMyRef={this.scrollToMyRef}   />
-              <div ref={this.myRef}></div>
-            </FullpageSection >
-            <FullpageSection style={{
-              backgroundColor: '#374B4A',
-            }}>
-              <AboutMe  />
-            </FullpageSection>
-            <FullpageSection style={{
-              backgroundColor: '#374B4A',
-            }}>
-            <OutSkills  scrollToMyRef={this.scrollToMyRef}   />
-            </FullpageSection>
-            <FullpageSection style={{
-              backgroundColor: '#374B4A',
-            }}>
-              <MyProjects scrollToMyRef={this.scrollToMyRef} />
-            </FullpageSection>
-          </FullPageSections>
-        </Fullpage>
+        <Iame  scrollToMyRef={this.scrollToMyRef}/>
+        <div ref={this.myRef}></div>
+        <AboutMe  />
+        <OutSkills  scrollToMyRef={this.scrollToMyRef}   />
+        <MyProjects scrollToMyRef={this.scrollToMyRef} />
+        <MyProjects1 scrollToMyRef={this.scrollToMyRef} />
       </div>
     );
   }
