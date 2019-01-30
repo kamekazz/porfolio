@@ -5,8 +5,8 @@ export default class aboutMe extends Component {
 
     state={
         onViw:true,
-        card:'',
-        card2:''
+        card:'foteCard',
+        card2:'foteCard'
     }
 
 
@@ -30,7 +30,7 @@ export default class aboutMe extends Component {
                 <img src="ast/img/me.jpg" alt="Person on a tour" className="aboutMe__img" />
             </figure>
         {/* </Slide> */}
-        <div  className={`aboutMe__shape2  ${this.state.card2}`} onMouseOut={()=> this.setState({card:'',card2:''})} >
+        <div  className={`aboutMe__shape2  ${this.state.card2}`} onMouseOut={()=> this.setState({card:'foteCard',card2:'foteCard'})} >
             <div onMouseOver={()=> this.setState({card:'ul',card2:'ul2'})}  className="aboutMe__shape2--1"></div>
             <div onMouseOver={()=> this.setState({card:'uu',card2:'uu2'})}  className="aboutMe__shape2--2"></div>
             <div onMouseOver={()=> this.setState({card:'ur',card2:'ur2'})}  className="aboutMe__shape2--3"></div>

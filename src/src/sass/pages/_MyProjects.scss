@@ -220,6 +220,7 @@
         grid-row-start: 4;
         grid-row-end: 5;
         align-self: end;
+        transform: translateY(17px);
         @media only screen and (max-width: 1607px) {
             grid-column-start: 4;
             grid-column-end: 7; 
@@ -230,7 +231,7 @@
         }
 
         *{
-            font-size: 1rem;
+            font-size: $default-font-size;
             margin: .5rem;
         }
     }
@@ -258,7 +259,7 @@
             align-self: start;
         }
         *{
-            font-size: 1rem;
+            font-size: $default-font-size;
             margin: .5rem;
         }
     }

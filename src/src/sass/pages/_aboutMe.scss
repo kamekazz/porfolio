@@ -108,22 +108,22 @@
         transform: rotateX(10deg)  rotateY(10deg) scale(1.01) ;
 
         -webkit-box-shadow: inset -15px 15px 19px -11px rgba(255,255,255,0.4);
--moz-box-shadow: inset -15px 15px 19px -11px rgba(255,255,255,0.4);
-box-shadow: inset -15px 15px 19px -11px rgba(255,255,255,0.4);
+        -moz-box-shadow: inset -15px 15px 19px -11px rgba(255,255,255,0.4);
+        box-shadow: inset -15px 15px 19px -11px rgba(255,255,255,0.4);
     }
 
     .dr2{
         transform: rotateX(10deg) rotateY(-10deg) scale(1.01) ;
         -webkit-box-shadow: inset 15px 15px 19px -11px rgba(255,255,255,0.4);
--moz-box-shadow: inset 15px 15px 19px -11px rgba(255,255,255,0.4);
-box-shadow: inset 15px 15px 19px -11px rgba(255,255,255,0.4);
+        -moz-box-shadow: inset 15px 15px 19px -11px rgba(255,255,255,0.4);
+        box-shadow: inset 15px 15px 19px -11px rgba(255,255,255,0.4);
     }
 
     .uu2{
         transform: rotateX(-10deg) scale(1.01);
         -webkit-box-shadow: inset 0px -15px 19px -11px rgba(255,255,255,0.4);
--moz-box-shadow: inset 0px -15px 19px -11px rgba(255,255,255,0.4);
-box-shadow: inset 0px -15px 19px -11px rgba(255,255,255,0.4);
+        -moz-box-shadow: inset 0px -15px 19px -11px rgba(255,255,255,0.4);
+        box-shadow: inset 0px -15px 19px -11px rgba(255,255,255,0.4);
     }
 
     .dd2{

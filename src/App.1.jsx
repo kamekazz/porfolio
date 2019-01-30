@@ -15,6 +15,12 @@ class App extends Component {
     this.myRef = React.createRef()   // Create a ref object 
   }
 
+  scrollToMyRef = () => {  
+    window.scrollTo({
+      top:this.myRef.current.offsetTop,  
+        behavior: "smooth"   // Optional, adds animation
+    })
+  }
 
 
 

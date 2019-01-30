@@ -135,8 +135,11 @@
                 display: block; 
                 color: $color-secondary-light;
                 line-height: 1rem;
+                transition: all .1s ease-out;
                 &:hover{
-                    animation: sacled .5s forwards  ease-out;
+                    cursor: none;
+                    font-size: 1.4rem;
+                    
                 }
             }
             ul{
@@ -288,14 +291,7 @@
    }
 }
 
-@keyframes sacled{
-    0%{
-      
-    }
-    100%{
-      font-size: 1.5rem;
-    }
-}
+
 
 .s2-bg{
     background-color: #526760;
