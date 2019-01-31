@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { connect } from 'react-redux'
-
+import Waypoint from 'react-waypoint';
 import Slide from '@material-ui/core/Slide';
 
 
@@ -9,6 +9,12 @@ import Slide from '@material-ui/core/Slide';
 
 
 export class MyProjects1 extends Component {
+
+  state={
+    onViw:false,
+    card:'foteCard',
+    card2:'foteCard'
+}
 
   hp_doleClik = () =>{
     this.props.scrollToMyRef()
@@ -23,9 +29,13 @@ export class MyProjects1 extends Component {
 
 
   render() {
+    const onViw = this.state.onViw
     return (
       <div onScroll={ this.activet} className="MyProjects1">
-
+        <Waypoint
+        onEnter={()=> this.setState({onViw:true})}
+        onLeave={()=> this.setState({onViw:false})}
+        />
 
 
         <h3 className="MyProjects__h3">Being inspired </h3>
@@ -36,6 +46,7 @@ export class MyProjects1 extends Component {
         <a href="https://yelp-clone-ffc27.firebaseapp.com/" className="clone">
           <img src="https://www.yext.com/wp-content/uploads/2016/08/yelp.png" alt="Person on a tour" className="clone2" />
         </a>
+
 
 
 
@@ -59,13 +70,13 @@ export class MyProjects1 extends Component {
         </a>
         </div> 
 
-       <Slide direction="left" in={true} timeout={1000} >
+       <Slide direction="left" in={onViw} timeout={1000} >
           <div className="title-p">
             <div className="title">Clones</div>
           </div>
         </Slide>
 
-        <Slide direction="right" in={true} timeout={3000} >
+        <Slide direction="right" in={onViw} timeout={3000} >
             <div className="s2-bg"></div>
         </Slide>
       </div>

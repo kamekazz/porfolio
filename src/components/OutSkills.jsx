@@ -3,12 +3,27 @@ import Slide from '@material-ui/core/Slide';
 import WorkIcon from '@material-ui/icons/Work';
 import TableSkills from './TableSkills';
 import 'animate.css'
+import Waypoint from 'react-waypoint';
+
 
  class OutSkills extends Component {
+    state={
+        onViw:false,
+        card:'foteCard',
+        card2:'foteCard'
+    }
   render() {
+    const onViw = this.state.onViw
+
     return (
       <div className="OutSkills">
+          
         <div className="skills">
+
+        <Waypoint
+        onEnter={()=> this.setState({onViw:true})}
+        onLeave={()=> this.setState({onViw:false})}
+        />
             <div className="header">
                 <h4>MY MISSION IS TO</h4>
                 <h3>ENGINEER & DEVELOP THE BEST WEBSITES AROUND</h3>
@@ -58,13 +73,13 @@ import 'animate.css'
 
      
 
-        <Slide direction="left" in={true} timeout={1000} >
+        <Slide direction="left" in={onViw} timeout={1000} >
           <div className="title-p">
             <div className="title">My SKILLS</div>
           </div>
         </Slide>
 
-        <Slide direction="right" in={true} timeout={3000} >
+        <Slide direction="right" in={onViw} timeout={3000} >
             <div className="s2-bg"></div>
         </Slide>
         

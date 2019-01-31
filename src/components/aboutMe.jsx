@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Slide from '@material-ui/core/Slide';
-
+import Waypoint from 'react-waypoint';
 export default class aboutMe extends Component {
 
     state={
-        onViw:true,
+        onViw:false,
         card:'foteCard',
         card2:'foteCard'
     }
@@ -23,13 +23,16 @@ export default class aboutMe extends Component {
   render() {
     const onViw = this.state.onViw
     return (
-  
-      <div id="aboutMe" className="aboutMe" >
-        {/* <Slide direction="right" in={onViw} timeout={1000} > */}
+      <div id="aboutMe"  className="aboutMe" >
+      <Waypoint
+        onEnter={()=> this.setState({onViw:true})}
+        onLeave={()=> this.setState({onViw:false})}
+        />
+        <Slide direction="right" in={onViw} timeout={1000} >
             <figure className={`aboutMe__shape  ${this.state.card}`}>
                 <img src="ast/img/me.jpg" alt="Person on a tour" className="aboutMe__img" />
             </figure>
-        {/* </Slide> */}
+         </Slide> 
         <div  className={`aboutMe__shape2  ${this.state.card2}`} onMouseOut={()=> this.setState({card:'foteCard',card2:'foteCard'})} >
             <div onMouseOver={()=> this.setState({card:'ul',card2:'ul2'})}  className="aboutMe__shape2--1"></div>
             <div onMouseOver={()=> this.setState({card:'uu',card2:'uu2'})}  className="aboutMe__shape2--2"></div>
@@ -48,7 +51,7 @@ export default class aboutMe extends Component {
             <p className="heder-text--p">I consider myself a full-stack developer, and I am equally comfortable developing Node.js backends as working with JavaScript in the front-end. My technical expertise also includes React, Redux,  ES6, HTML5,CSS a bit of angular and some other frameworks.</p>
         </div>
         </Slide>
-        <Slide direction="up" in={onViw} timeout={1000} >
+        <Slide direction="left" in={onViw} timeout={1000} >
             <div className="a-contanar">
             <h4>Personal Info</h4>
             <ul>
@@ -60,7 +63,7 @@ export default class aboutMe extends Component {
             </ul>
         </div>
         </Slide>
-        <Slide direction="up" in={onViw} timeout={1000} >
+        <Slide direction="left" in={onViw} timeout={1000} >
         <div className="b-contanar">
             <h4>My Resume</h4>
             <p>I can't wait to be part of your team</p> 

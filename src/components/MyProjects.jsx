@@ -4,12 +4,19 @@ import { connect } from 'react-redux'
 
 import Slide from '@material-ui/core/Slide';
 import Chip from '@material-ui/core/Chip';
+import Waypoint from 'react-waypoint';
 
 import Fab from '@material-ui/core/Fab';
 
 
 
 export class MyProjects extends Component {
+
+  state={
+    onViw:false,
+    card:'foteCard',
+    card2:'foteCard'
+}
 
   hp_doleClik = () =>{
     this.props.scrollToMyRef()
@@ -24,9 +31,14 @@ export class MyProjects extends Component {
 
 
   render() {
+    const onViw = this.state.onViw
+
     return (
       <div onScroll={ this.activet} className="MyProjects">
-
+        <Waypoint
+        onEnter={()=> this.setState({onViw:true})}
+        onLeave={()=> this.setState({onViw:false})}
+        />
 
         <figure className="MyProjects__shape--1">
             <img src="ast/img/mony.jpg" alt="Person on a tour" className="MyProjects__img" />
@@ -113,13 +125,13 @@ export class MyProjects extends Component {
         </a>
         </div> 
 
-       <Slide direction="left" in={true} timeout={1000} >
+       <Slide direction="left" in={onViw} timeout={1000} >
           <div className="title-p">
             <div className="title">My Projects</div>
           </div>
         </Slide>
 
-        <Slide direction="right" in={true} timeout={3000} >
+        <Slide direction="right" in={onViw} timeout={3000} >
             <div className="s2-bg"></div>
         </Slide>
       </div>

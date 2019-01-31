@@ -3,6 +3,7 @@
     color: $color-grey-light-1;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
     display: grid;
     grid-template-columns: 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -669,6 +670,11 @@ box-shadow: inset -15px 0px 19px -11px rgba(255,255,255,0.4);
         opacity: .4;
         color: #526760;
     }
+}
+
+.app1{
+    overflow: hidden;
+    width: 100vw;
 }
 
 

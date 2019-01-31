@@ -28,7 +28,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="app1">
         <Iame  scrollToMyRef={this.scrollToMyRef}/>
         <div ref={this.myRef}></div>
         <AboutMe  />
