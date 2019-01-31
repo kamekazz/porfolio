@@ -157,7 +157,8 @@
         grid-row-end: 10;
         background-image:  linear-gradient(to right, $color-primary-light, $color-primary-dark);
         opacity: 1;
-        padding: 3rem;
+      
+        padding: 5vh;
         @media only screen and (max-width: 800px) {
             padding: 1rem;
         }

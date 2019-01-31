@@ -39,7 +39,6 @@ export class MyProjects extends Component {
         onEnter={()=> this.setState({onViw:true})}
         onLeave={()=> this.setState({onViw:false})}
         />
-
         <figure className="MyProjects__shape--1">
             <img src="ast/img/mony.jpg" alt="Person on a tour" className="MyProjects__img" />
             <figcaption className="MyProjects__caption">FioBook APP</figcaption>
@@ -72,7 +71,7 @@ export class MyProjects extends Component {
             </Fab>
           </a>
         </div>
-
+    
         <figure className="MyProjects__shape--2">
             <img src="ast/img/music.jpg" alt="Person on a tour" className="MyProjects__img" />
             <figcaption className="MyProjects__caption">Viva la Musica</figcaption>

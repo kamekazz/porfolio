@@ -28,11 +28,11 @@ export default class aboutMe extends Component {
         onEnter={()=> this.setState({onViw:true})}
         onLeave={()=> this.setState({onViw:false})}
         />
-        <Slide direction="right" in={onViw} timeout={1000} >
+
             <figure className={`aboutMe__shape  ${this.state.card}`}>
                 <img src="ast/img/me.jpg" alt="Person on a tour" className="aboutMe__img" />
             </figure>
-         </Slide> 
+      
         <div  className={`aboutMe__shape2  ${this.state.card2}`} onMouseOut={()=> this.setState({card:'foteCard',card2:'foteCard'})} >
             <div onMouseOver={()=> this.setState({card:'ul',card2:'ul2'})}  className="aboutMe__shape2--1"></div>
             <div onMouseOver={()=> this.setState({card:'uu',card2:'uu2'})}  className="aboutMe__shape2--2"></div>
@@ -95,3 +95,10 @@ export default class aboutMe extends Component {
     )
   }
 }
+
+// "prop-types": "^15.6.2",
+
+// "react-dat-gui": "^1.0.2",
+
+// "react-fluid-animation": "link:..",
+// "react-github-corner": "^2.3.0"

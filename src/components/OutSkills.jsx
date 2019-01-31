@@ -4,6 +4,7 @@ import WorkIcon from '@material-ui/icons/Work';
 import TableSkills from './TableSkills';
 import 'animate.css'
 import Waypoint from 'react-waypoint';
+import App from '../v2/App';
 
 
  class OutSkills extends Component {
@@ -67,7 +68,7 @@ import Waypoint from 'react-waypoint';
         </div>
         <Slide direction="left" in={onViw} timeout={1000} >
             <div className="framworks">
-                <TableSkills />
+                <App />
             </div>
         </Slide>
         
