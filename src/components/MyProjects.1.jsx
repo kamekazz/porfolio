@@ -3,9 +3,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import Slide from '@material-ui/core/Slide';
-import Chip from '@material-ui/core/Chip';
 
-import Fab from '@material-ui/core/Fab';
+
 
 
 
@@ -29,15 +28,14 @@ export class MyProjects1 extends Component {
 
 
 
-        <h3 className="MyProjects__h3--1">Being inspired </h3>
-        <div className="MyProjects__text">
-            <p>
-            To Showcase my skills I decided to  clone  this website to show my  Coding skills  And that I can't create anything that a designer throws at me .
-            </p>
-
-        </div>
-
-
+        <h3 className="MyProjects__h3">Being inspired </h3>
+        
+        <p className="MyProjects__text">
+        To Showcase my skills I decided to  clone  this website to show my  Coding skills  And that I can't create anything that a designer throws at me .
+        </p>
+        <a href="https://yelp-clone-ffc27.firebaseapp.com/" className="clone">
+          <img src="https://www.yext.com/wp-content/uploads/2016/08/yelp.png" alt="Person on a tour" className="clone2" />
+        </a>
 
 
 
