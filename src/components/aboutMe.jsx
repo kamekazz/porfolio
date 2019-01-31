@@ -69,16 +69,18 @@ export default class aboutMe extends Component {
             <p>I can't wait to be part of your team</p> 
         </div>
         </Slide>
-        <div className="Donwload__position">
-        <a href="https://docs.google.com/document/d/18T-h-v1xDOcscdzE0l0d0c9IShlWbbZaAYtLo12iLTE/edit?usp=sharing"rel="noopener noreferrer" target="_blank">
-        <div className="btn" >Download PDF</div>
-        </a>
-        </div>
-
+        <Slide direction="left" in={onViw} timeout={1000} >
+            <div className="Donwload__position">
+            <a href="https://docs.google.com/document/d/18T-h-v1xDOcscdzE0l0d0c9IShlWbbZaAYtLo12iLTE/edit?usp=sharing"rel="noopener noreferrer" target="_blank">
+            <div className="btn" >Download PDF</div>
+            </a>
+            </div>
+        </Slide>
+        <Slide direction="right" in={onViw} timeout={1000} >
         <div className ="line2"/>
+        </Slide>
 
-
-        <Slide direction="left" in={true} timeout={1000} >
+        <Slide direction="left" in={onViw} timeout={1000} >
         <div className="title-p">
             <div className="title">About Me</div>
         </div>

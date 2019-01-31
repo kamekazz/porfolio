@@ -24,15 +24,18 @@ import Waypoint from 'react-waypoint';
         onEnter={()=> this.setState({onViw:true})}
         onLeave={()=> this.setState({onViw:false})}
         />
+        <Slide direction="right" in={onViw} timeout={1000} >
             <div className="header">
                 <h4>MY MISSION IS TO</h4>
                 <h3>ENGINEER & DEVELOP THE BEST WEBSITES AROUND</h3>
                 <div className="line"/>
             </div>
+        </Slide>
+        <Slide direction="right" in={onViw} timeout={1000} >
             <div className="exporience">
-                <WorkIcon  className="icon "/>
+                <WorkIcon className="icon " />
                 <h4>Experience</h4>
-                <div className="line2"/>
+                <div className="line2" />
                 <ul>
                     <li>
                         <span>Front-End Developer</span>
@@ -40,7 +43,7 @@ import Waypoint from 'react-waypoint';
                     </li>
                     <li>
                         <span>Back-End Developer</span>
-                        <p >node js</p> 
+                        <p >node js</p>
                     </li>
                     <li>
                         <span>Database</span>
@@ -52,7 +55,7 @@ import Waypoint from 'react-waypoint';
                     </li>
                     <li>
                         <span>CSS Library</span>
-                        <p>bootstrap material-design semantic-ui</p> 
+                        <p>bootstrap material-design semantic-ui</p>
                     </li>
                     <li>
                         <span>Api</span>
@@ -60,19 +63,19 @@ import Waypoint from 'react-waypoint';
                     </li>
                 </ul>
             </div>
+        </Slide>
         </div>
-        <div className="framworks">
-            <TableSkills />
-        </div>
-
+        <Slide direction="left" in={onViw} timeout={1000} >
+            <div className="framworks">
+                <TableSkills />
+            </div>
+        </Slide>
+        
+        <Slide direction="right" in={onViw} timeout={1000} >
         <div className="btn--posich" >
             <div onClick={this.props.scrollToMyRef}   className="gettouch btn">get in touch</div>
         </div>
-
-
-
-     
-
+        </Slide>
         <Slide direction="left" in={onViw} timeout={1000} >
           <div className="title-p">
             <div className="title">My SKILLS</div>
