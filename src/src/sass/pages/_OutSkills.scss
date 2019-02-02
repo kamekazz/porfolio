@@ -148,7 +148,63 @@
             }
 
         }
+        .build{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            @media only screen and (max-width: 414px) {
+                grid-row-start: 4;
+                grid-row-end: 9;
+                grid-row-start: 4;
+                grid-row-end: 6;
+            }
+            @media only screen and (max-width: 348px) {
+                grid-row-start: 3;
+                grid-row-end: 9;
+            }
+            .inoc{
+                font-size: 9rem;
+                margin: 15px;
+            }
+            h4{
+                font-size: 2rem;
+                color: $color-primary-light;
+
+            }
+            ul li span{
+                font-size: 1.5rem;
+                display: block; 
+                line-height: 3rem;
+                
+            }
+            ul li p{
+                font-size: 1.2rem;
+                display: block; 
+                color: $color-secondary-light;
+                line-height: 1rem;
+                transition: all .1s ease-out;
+                &:hover{
+                    cursor: none;
+                    font-size: 1.4rem;
+                    
+                }
+            }
+            ul{
+                list-style-type: none;
+
+            }
+
+        }
     }
+
+//     Custom  CMD
+// Mean Stack
+// PWA 
+// Mern Stack
+// Wdeb Application
+// Single Page Application
+// RESTful API 
 
     .framworks{
         grid-column-start: 6;

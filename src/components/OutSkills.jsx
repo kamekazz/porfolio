@@ -56,11 +56,41 @@ import App from '../v2/App';
                     </li>
                     <li>
                         <span>CSS Library</span>
-                        <p>bootstrap material-design semantic-ui</p>
+                        <p>bootstrap material-design semantic-ui </p>
                     </li>
                     <li>
                         <span>Api</span>
                         <p >Google twilio openweathermap more...</p>
+                    </li>
+                </ul>
+            </div>
+        </Slide>
+        <Slide direction="right" in={onViw} timeout={1000} >
+            <div className="build">
+            <i class="fas fa-tools inoc"></i>
+                <h4>what can i build ?  </h4>
+                <div className="line2" />
+                <ul>
+                    <li>
+                        <span>Custom  CMD</span>
+                    </li>
+                    <li>
+                        <span>Mean Stack</span>
+                    </li>
+                    <li>
+                        <span>PWA</span>
+                    </li>
+                    <li>
+                        <span>Mern Stack</span>
+                    </li>
+                    <li>
+                        <span> Wdeb Application</span>
+                    </li>
+                    <li>
+                        <span>Single Page Application</span>
+                    </li>
+                    <li>
+                        <span>RESTful API </span>
                     </li>
                 </ul>
             </div>
@@ -72,11 +102,6 @@ import App from '../v2/App';
             </div>
         </Slide>
         
-        <Slide direction="right" in={onViw} timeout={1000} >
-        <div className="btn--posich" >
-            <div onClick={this.props.scrollToMyRef}   className="gettouch btn">get in touch</div>
-        </div>
-        </Slide>
         <Slide direction="left" in={onViw} timeout={1000} >
           <div className="title-p">
             <div className="title">My SKILLS</div>
