@@ -1,0 +1,72 @@
+.Nav {
+    position: absolute;
+    z-index: 2;
+
+    .navBar {
+        width: 200px;
+        height: 100vh;
+        background-color: gray;
+        float: left;
+    }
+
+    .small {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        background-color: red;
+        cursor: pointer;
+        transform: translateX(200px);
+        transition: all .2s ease-in-out;
+        &:hover{
+            height: 42px;
+            width: 42px;
+        }
+
+        * {
+            background: white;
+            height: 5px;
+            width: 70%;
+            border-radius: 10%;
+            position: absolute;
+            transition: all .2s ease-in-out;
+        }
+
+        .top {
+            top: 20%;
+            left: 50%;
+        }
+
+        .openT{
+            transform: translate(-50%, -50%) rotate(45deg) translateY(8px) translateX(7px);
+        }
+        .closeT{
+            transform: translate(-50%, -50%);
+        }
+
+        .medio {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .botn {
+            top: 80%;
+            left: 50%;
+        }
+        .closeB {
+            transform: translate(-50%, -50%);
+        }
+        .openB{
+            top: 20%;
+             transform: translate(-50%, -50%) rotate(-45deg) translateY(8px) translateX(-7px);
+        }
+
+    }
+
+}
+
+.mainApp {
+    transform: translateX(200px);
+
+}

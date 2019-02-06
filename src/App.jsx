@@ -1,7 +1,8 @@
 import React, { Component, lazy,Suspense } from 'react';
 import './src/App.scss';
-
+import  Nav  from './components/Nav';
 import Loding from './components/Loding';
+// import App1 from './App.1';
 
 const App1 = lazy(()=>  import('./App.1'))
 
@@ -29,10 +30,12 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Nav />
         <Suspense fallback={<Loding />}>
             <App1 />
         </Suspense>
       </div>
+
     );
   }
 }
