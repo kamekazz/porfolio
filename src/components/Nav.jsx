@@ -15,13 +15,13 @@ import React, { Component } from 'react'
   render() {
       const {open}=this.state;
     return (
-      <div className="Nav">
+      <div className={open ? 'Nav ':'Nav close' }>
         <div className="navBar">
             
         </div>
         <div onClick={this.togoleNav} className="small">
             <div className={open ? 'top openT':'top closeT' } />
-            <div className="medio " />
+            <div className={open ? 'medio medioO':'medio medioC' } />
             <div className={open ? 'botn openB':'botn closeB' } />
         </div>
       </div>
