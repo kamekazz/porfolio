@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import history from '../../src/history'
 
 
-const dataNav=[{title:'About Me',},{title:'My Skills'},{title:'My Projects'},{title:'Web Clone'}]
+
+const dataNav=[{title:'About Me',location:'/aboutme'},{title:'My Skills',location:'/skills'},{title:'My Projects',location:'/myprojects'},{title:'Web Clone',location:'/clone'}]
 
  class Nav extends Component {
 
@@ -12,19 +14,38 @@ const dataNav=[{title:'About Me',},{title:'My Skills'},{title:'My Projects'},{ti
     togoleNav =()=>{
         this.setState({open:!this.state.open})
     }
+
+    goto=(prLocation)=>{
+        setTimeout(() => {
+            history.push(prLocation)
+            
+        }, 2000);
+        setTimeout(() => {
+            this.setState({open:false})
+        }, 3500); 
+    }
+    onClose=()=>{
+        this.setState({open:false})
+    }
+
   render() {
     const {open}=this.state;
 
+    
+
+
     const rdNavTag =()=>(
         dataNav.map(item =>(
-            <li key={item.title} className="navItem">{item.title}</li>
+            <li key={item.title} onClick={()=> this.goto(item.location)} className="navItem">{item.title}</li>
         ))
     )
 
 
     return (
       <div className={open ? 'Nav ':'Nav close' }>
+
         <div className="navBar">
+
             <div className="contaner menu">
                 <h2 className="h2">Menu</h2>
             </div>

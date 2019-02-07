@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Slide from '@material-ui/core/Slide';
 // import { connect } from 'react-redux'
 import Waypoint from 'react-waypoint';
+import history from '../../src/history'
+
 
 class Iame extends Component {
 
@@ -9,6 +11,13 @@ class Iame extends Component {
         onViw:false,
         card:'foteCard',
         card2:'foteCard'
+    }
+
+    componentDidMount(){
+        setTimeout(() => {
+            history.push('/aboutme')
+        }, 5000);
+        
     }
 
 
