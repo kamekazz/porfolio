@@ -29,7 +29,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="app">
         <Nav />
         <Suspense fallback={<Loding />}>
             <App1 />
