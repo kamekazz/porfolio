@@ -8,7 +8,7 @@
 
     .mainConten{
         border-radius: 12px;
-        width: 1200px;
+        max-width:  1200px;
         background-color: #526760;
         overflow: hidden;
         margin: 0 auto;
@@ -20,13 +20,19 @@
         grid-template-areas: '.    .     mepic'
                             'texts texts texts'
                             'botumText botumText botumText';
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            grid-template-areas: '.    mepic     .'
+                            'texts texts texts'
+                            'botumText botumText botumText';
+        }
 
         .aboutMe__shape {
             grid-area: mepic;
             width: 350px;
             height: 350px;
             overflow: hidden;
-            border-radius: 3px;
+            border-radius: 6px;
             position: relative;
             box-shadow: 0 1rem 1rem rgba($color-black, .2);
             // FUNCTIONALITY
@@ -34,6 +40,9 @@
             -moz-perspective: 500rem;
             transition: all .2s;
             transition-timing-function: cubic-bezier(0.75, 0.76, 0.47, 1.19);
+            @media only screen and (max-width: 768px) {
+                
+            }
         }
 
         .heder__text {
@@ -60,12 +69,15 @@
         .botumText{
             grid-area: botumText;
             display: flex;
-
             justify-content: space-around;
+            @media only screen and (max-width: 768px) {
+                flex-direction: column;
+            }
 
             .r{
                 .Donwload__position{
                     margin-top: 12px;
+                    
                 }
             }
         }

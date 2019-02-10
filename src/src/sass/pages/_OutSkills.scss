@@ -1,53 +1,127 @@
 .OutSkills{
-    position: relative;
     color: $color-grey-light-1;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    padding: 12px;
+    .mainConten{
+        border-radius: 12px;
+        max-width:  1200px;
+        background-color: #526760;
+        overflow: hidden;
+        margin: 0 auto;
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        padding: 24px;
+        display: grid; 
 
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%  ;
-    grid-gap: 1rem;
+        .skills{
+
+            padding: 3rem;
+            display: grid;
+    
+            .header{
+
+                h4{
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    color: $color-primary-light;
+                }
+    
+                h3{
+                    font-size: 3rem;
+                    line-height: 3rem;
+    
+                }
+            }
+            .meind{
+                display: flex;
+                justify-content: space-around;
+                @media only screen and (max-width: 700px) {
+                    flex-direction: column;
+            
+                }
+            }
+            .exporience{
+      
+                h4{
+                    font-size: 2rem;
+                    color: $color-primary-light;
+    
+                }
+                ul li span{
+                    font-size: 1.5rem;
+                    display: block; 
+                    line-height: 3rem;
+                    
+                }
+                ul li p{
+                    font-size: 1.2rem;
+                    display: block; 
+                    color: $color-secondary-light;
+                    line-height: 1rem;
+                    transition: all .1s ease-out;
+                    &:hover{
+                        cursor: none;
+                        font-size: 1.4rem;
+                        
+                    }
+                }
+                ul{
+                    list-style-type: none;
+    
+                }
+    
+            }
+            .build{
+    
+                @media only screen and (max-width: 414px) {
+    
+                }
+                @media only screen and (max-width: 348px) {
+                    
+                }
+                .inoc{
+                    font-size: 9rem;
+                    margin: 15px;
+                    &:hover{
+                        animation: swing 1s forwards  ease-in-out;
+                    }
+                }
+                h4{
+                    font-size: 2rem;
+                    color: $color-primary-light;
+    
+                }
+                ul li span{
+                    font-size: 1.5rem;
+                    display: block; 
+                    line-height: 3rem;
+                    
+                }
+                ul li p{
+                    font-size: 1.2rem;
+                    display: block; 
+                    color: $color-secondary-light;
+                    line-height: 1rem;
+                    transition: all .1s ease-out;
+                    &:hover{
+                        cursor: none;
+                        font-size: 1.4rem;
+                        
+                    }
+                }
+                ul{
+                    list-style-type: none;
+    
+                }
+    
+            }
+        }
+
+    }
+
 
     .btn--posich{
-        grid-column-start: 4;
-        grid-column-end: 6;
-        grid-row-start: 3;
-        grid-row-end: 5;
+
         align-self: center;
- 
-        @media only screen and (max-width: 968px) {
-            grid-column-start: 3;
-            grid-column-end: 6;
-        }
-        @media only screen and (max-width: 574px) {
-            grid-column-start: 2;
-            grid-column-end: 6;
-            grid-row-start: 7;
-            grid-row-end: 8;
-        }
-
-        @media only screen and (max-width: 436px) {
-            grid-column-start: 1;
-            grid-column-end: 6;
-            justify-self: center;
-        }
-
-        @media only screen and (max-width: 414px) {
-            grid-row-start: 8;
-            grid-row-end: 9;
-            grid-column-start: 1;
-            grid-column-end: 11;
-            align-self: end;
-        }
-        @media only screen and (max-width: 348px) {
-            grid-column-start: 1;
-            grid-column-end: 7;
-        }
-
-
-        
         .gettouch{
             color: $color-grey-light-1;
             background-color: $color-secondary-dark;
@@ -63,140 +137,7 @@
         }
     }
 
-    .skills{
-        grid-column-start: 2;
-        grid-column-end: 12;
-        grid-row-start: 1;
-        grid-row-end: 10;
-        padding: 3rem;
-        display: grid;
-        grid-template-columns: 1fr  1fr 1fr 1fr 1fr ;
-        grid-template-rows: 20%  20%   20%   20%  20% ;
-        grid-gap: 1rem;
-        @media only screen and (max-width: 968px) {
-            grid-column-start: 1;
-        }
-    
-        @media only screen and (max-width: 414px) {
-            grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%  ;
-        }
 
-
-
-        .header{
-            grid-column-start: 1;
-            grid-column-end: 3;
-            grid-row-start: 1;
-            grid-row-end: 3;
-            @media only screen and (max-width: 348px) {
-                grid-column-start: 1;
-                grid-column-end: 6;
-            }
-            h4{
-                font-size: 2rem;
-                line-height: 3rem;
-                color: $color-primary-light;
-            }
-
-            h3{
-                font-size: 3rem;
-                line-height: 3rem;
-
-            }
-        }
-        .exporience{
-            grid-column-start: 1;
-            grid-column-end: 7;
-            grid-row-start: 2;
-            grid-row-end: 3;
-            @media only screen and (max-width: 414px) {
-                grid-row-start: 4;
-                grid-row-end: 9;
-                grid-row-start: 4;
-                grid-row-end: 6;
-            }
-            @media only screen and (max-width: 348px) {
-                grid-row-start: 3;
-                grid-row-end: 9;
-            }
-            h4{
-                font-size: 2rem;
-                color: $color-primary-light;
-
-            }
-            ul li span{
-                font-size: 1.5rem;
-                display: block; 
-                line-height: 3rem;
-                
-            }
-            ul li p{
-                font-size: 1.2rem;
-                display: block; 
-                color: $color-secondary-light;
-                line-height: 1rem;
-                transition: all .1s ease-out;
-                &:hover{
-                    cursor: none;
-                    font-size: 1.4rem;
-                    
-                }
-            }
-            ul{
-                list-style-type: none;
-
-            }
-
-        }
-        .build{
-            grid-column-start: 2;
-            grid-column-end: 3;
-            grid-row-start: 2;
-            grid-row-end: 3;
-            @media only screen and (max-width: 414px) {
-                grid-row-start: 4;
-                grid-row-end: 9;
-                grid-row-start: 4;
-                grid-row-end: 6;
-            }
-            @media only screen and (max-width: 348px) {
-                grid-row-start: 3;
-                grid-row-end: 9;
-            }
-            .inoc{
-                font-size: 9rem;
-                margin: 15px;
-            }
-            h4{
-                font-size: 2rem;
-                color: $color-primary-light;
-
-            }
-            ul li span{
-                font-size: 1.5rem;
-                display: block; 
-                line-height: 3rem;
-                
-            }
-            ul li p{
-                font-size: 1.2rem;
-                display: block; 
-                color: $color-secondary-light;
-                line-height: 1rem;
-                transition: all .1s ease-out;
-                &:hover{
-                    cursor: none;
-                    font-size: 1.4rem;
-                    
-                }
-            }
-            ul{
-                list-style-type: none;
-
-            }
-
-        }
-    }
 
 //     Custom  CMD
 // Mean Stack
@@ -207,23 +148,12 @@
 // RESTful API 
 
     .framworks{
-        grid-column-start: 6;
-        grid-column-end: 11;
-        grid-row-start: 1;
-        grid-row-end: 10;
+
         background-image:  linear-gradient(to right, $color-primary-light, $color-primary-dark);
         opacity: 1;
       
         padding: 5vh;
-        @media only screen and (max-width: 800px) {
-            padding: 1rem;
-        }
-        @media only screen and (max-width: 414px) {
-            padding: .2rem;
-        }
-        @media only screen and (max-width: 348px) {
-            display: none;
-        }
+
         
     }
 
@@ -244,10 +174,7 @@
 
     .s2-bg{
         background-color: #526760;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 10;
+
         @media only screen and (max-width: 968px) {
             display: none;
             
@@ -256,10 +183,7 @@
 
     .title-p{
         animation: title 8s forwards 3s ease-out;
-        grid-column-start: 1;
-        grid-column-end: 12;
-        grid-row-start: 8;
-        grid-row-end: 10;
+
         justify-self: end;
         
       
@@ -349,11 +273,3 @@
 }
 
 
-
-.s2-bg{
-    background-color: #526760;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 10;
-}

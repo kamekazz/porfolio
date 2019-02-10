@@ -17,103 +17,89 @@ import App from '../v2/App';
     const onViw = this.state.onViw
 
     return (
-      <div className="OutSkills">
-          
-        <div className="skills">
+        <div className="OutSkills">
+            <div className="mainConten">
+                <div className="skills">
 
-        <Waypoint
-        onEnter={()=> this.setState({onViw:true})}
-        onLeave={()=> this.setState({onViw:false})}
-        />
-        <Slide direction="right" in={onViw} timeout={1000} >
-            <div className="header">
-                <h4>MY MISSION IS TO</h4>
-                <h3>ENGINEER & DEVELOP THE BEST WEBSITES AROUND</h3>
-                <div className="line"/>
+                    <div className="header">
+                        <h4>MY MISSION IS TO</h4>
+                        <h3>ENGINEER & DEVELOP THE BEST WEBSITES AROUND</h3>
+                        <div className="line" />
+                    </div>
+
+                    <div className="meind">
+
+                        <div className="exporience">
+                            <WorkIcon className="icon " />
+                            <h4>Experience</h4>
+                            <div className="line2" />
+                            <ul>
+                                <li>
+                                    <span>Programing Languages</span>
+                                    <p >javascript typescript</p>
+                                </li>
+                                <li>
+                                    <span>Front-End Developer</span>
+                                    <p >jquery js react angular</p>
+                                </li>
+                                <li>
+                                    <span>Back-End Developer</span>
+                                    <p >node js</p>
+                                </li>
+                                <li>
+                                    <span>Database</span>
+                                    <p >mongoose mongodb</p>
+                                </li>
+                                <li>
+                                    <span>Authentication</span>
+                                    <p >jwt passport oauth</p>
+                                </li>
+                                <li>
+                                    <span>CSS Library</span>
+                                    <p>bootstrap material-design semantic-ui </p>
+                                </li>
+                                <li>
+                                    <span>Api</span>
+                                    <p >Google twilio openweathermap more...</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="build">
+                            <i className="fas fa-tools inoc"></i>
+                            <h4>what can i build ?  </h4>
+                            <div className="line2" />
+                            <ul>
+                                <li>
+                                    <span>Custom  CMD</span>
+                                </li>
+                                <li>
+                                    <span>Mean Stack</span>
+                                </li>
+                                <li>
+                                    <span>PWA</span>
+                                </li>
+                                <li>
+                                    <span>Mern Stack</span>
+                                </li>
+                                <li>
+                                    <span> Web Application</span>
+                                </li>
+                                <li>
+                                    <span>Single Page Application</span>
+                                </li>
+                                <li>
+                                    <span>RESTful API </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="framworks">
+                    <App />
+                </div>
             </div>
-        </Slide>
-        <Slide direction="right" in={onViw} timeout={1000} >
-            <div className="exporience">
-                <WorkIcon className="icon " />
-                <h4>Experience</h4>
-                <div className="line2" />
-                <ul>
-                    <li>
-                        <span>Front-End Developer</span>
-                        <p >jquery js react angular</p>
-                    </li>
-                    <li>
-                        <span>Back-End Developer</span>
-                        <p >node js</p>
-                    </li>
-                    <li>
-                        <span>Database</span>
-                        <p >mongoose mongodb</p>
-                    </li>
-                    <li>
-                        <span>Authentication</span>
-                        <p >jwt passport oauth</p>
-                    </li>
-                    <li>
-                        <span>CSS Library</span>
-                        <p>bootstrap material-design semantic-ui </p>
-                    </li>
-                    <li>
-                        <span>Api</span>
-                        <p >Google twilio openweathermap more...</p>
-                    </li>
-                </ul>
-            </div>
-        </Slide>
-        <Slide direction="right" in={onViw} timeout={1000} >
-            <div className="build">
-            <i className="fas fa-tools inoc"></i>
-                <h4>what can i build ?  </h4>
-                <div className="line2" />
-                <ul>
-                    <li>
-                        <span>Custom  CMD</span>
-                    </li>
-                    <li>
-                        <span>Mean Stack</span>
-                    </li>
-                    <li>
-                        <span>PWA</span>
-                    </li>
-                    <li>
-                        <span>Mern Stack</span>
-                    </li>
-                    <li>
-                        <span> Wdeb Application</span>
-                    </li>
-                    <li>
-                        <span>Single Page Application</span>
-                    </li>
-                    <li>
-                        <span>RESTful API </span>
-                    </li>
-                </ul>
-            </div>
-        </Slide>
         </div>
-        <Slide direction="left" in={onViw} timeout={1000} >
-            <div className="framworks">
-                <App />
-            </div>
-        </Slide>
-        
-        <Slide direction="left" in={onViw} timeout={1000} >
-          <div className="title-p">
-            <div className="title">My SKILLS</div>
-          </div>
-        </Slide>
-
-        <Slide direction="right" in={onViw} timeout={3000} >
-            <div className="s2-bg"></div>
-        </Slide>
-        
-
-      </div>
     )
   }
 }
