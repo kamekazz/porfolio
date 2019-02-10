@@ -44,6 +44,7 @@ class Iame extends Component {
                     powered by react.js
                 </div>
             </div>
+
         </Slide>
 
 
@@ -70,10 +71,6 @@ class Iame extends Component {
                 <div onClick={this.props.scrollToMyRef}  className="gettouch btn">get in touch</div>
             </div>
         </Slide>
-
-
-            
-
       </div>
     )
   }

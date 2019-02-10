@@ -22,6 +22,14 @@
         top:60%;
         line-height: 6rem;
         color: $color-grey-light-1;
+        @media only screen and (max-width: 1024px) {
+            top:30%;
+        }
+        @media only screen and (max-width: 500px) {
+            font-size: 37px;
+            top: 30%;
+            line-height: 80px;
+        }
 
         &__header--top{
             display: block;
@@ -40,15 +48,16 @@
     .gettouch--posich{
         position: absolute;
         top:85%;
-        left :10%;
-
+      
+        width: 100%;
+      
 
     }
 
     .gettouch{
        background-color: $color-secondary-dark;
        color: $color-grey-light-1;
-       font-weight: 700;
+      
 
        &:active{
            color: $color-primary;
@@ -93,7 +102,7 @@
         right:0%;
         transform: translate(-50%, -50%);
         @media only screen and (max-width: 425px) {
-            top:0%;
+            top:10%;
         }
     
 
