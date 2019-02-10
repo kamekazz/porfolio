@@ -68,7 +68,7 @@ class Iame extends Component {
         />
         <Slide direction="right" in={onViw} timeout={1000}  mountOnEnter unmountOnExit >
             <div className="gettouch--posich" >
-                <div onClick={this.props.scrollToMyRef}  className="gettouch btn">get in touch</div>
+                <div onClick={this.props.goto}  className="gettouch btn">get in touch</div>
             </div>
         </Slide>
       </div>
