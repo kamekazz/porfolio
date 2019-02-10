@@ -67,7 +67,7 @@ import App from '../v2/App';
         </Slide>
         <Slide direction="right" in={onViw} timeout={1000} >
             <div className="build">
-            <i class="fas fa-tools inoc"></i>
+            <i className="fas fa-tools inoc"></i>
                 <h4>what can i build ?  </h4>
                 <div className="line2" />
                 <ul>

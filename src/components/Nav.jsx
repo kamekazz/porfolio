@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import history from '../../src/history'
+import { connect } from 'react-redux'
+import * as actions from '../store/actions'
 
 
 
@@ -16,13 +18,14 @@ const dataNav=[{title:'About Me',location:'/aboutme'},{title:'My Skills',locatio
     }
 
     goto=(prLocation)=>{
+        this.props.acOFview(true)
         setTimeout(() => {
             history.push(prLocation)
-            
+            this.props.acOFview(false)
         }, 2000);
         setTimeout(() => {
             this.setState({open:false})
-        }, 3500); 
+        }, 500); 
     }
     onClose=()=>{
         this.setState({open:false})
@@ -87,4 +90,12 @@ const dataNav=[{title:'About Me',location:'/aboutme'},{title:'My Skills',locatio
     )
   }
 }
-export default Nav
+
+const mapStateToProps = (state) => ({
+    offView: state.nav.offView
+})
+
+
+
+export default connect(mapStateToProps, actions)(Nav)
+

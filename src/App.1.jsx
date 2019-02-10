@@ -8,29 +8,20 @@ import OutSkills from './components/OutSkills';
 import  MyProjects  from './components/MyProjects';
 import  MyProjects1  from './components/MyProjects.1';
 import  Nav  from './components/Nav';
-
+import { connect } from 'react-redux'
+import * as actions from './store/actions'
 
 
 
 class App1 extends Component {
-  constructor(props) {
-    super(props)
-    this.myRef = React.createRef()   // Create a ref object 
-  }
 
-  scrollToMyRef = () => {  
-    window.scrollTo({
-      top:this.myRef.current.offsetTop,  
-        behavior: "smooth"   // Optional, adds animation
-    })
-  }
-
+  
 
   render() {
+   const {offView} = this.props;
     return (
   
       <Router  history={history}>      
-            <div className="mainApp">
               <Switch>
                 <Route path="/" exact component={Iame} />
                 <Route path="/aboutme" exact component={AboutMe} />
@@ -38,13 +29,17 @@ class App1 extends Component {
                 <Route path="/myprojects" exact component={MyProjects} />
                 <Route path="/clone" exact component={MyProjects1} />
               </Switch>
-            </div>
       </Router>
   
     );
   }
 }
 
-export default App1;
+const mapStateToProps = (state) => ({
+  offView: state.nav.offView
+})
 
+
+
+export default connect(mapStateToProps, actions)(App1)
 

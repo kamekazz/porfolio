@@ -167,12 +167,26 @@
     
 }
 
-.mainApp {
-    // transform: translateX(250px);
 
-}
 
 .app{
-    overflow: hidden;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+
 }
+
+.leve{
+    animation: bounceOutLeft 1s forwards  ;
+}
+
+.bk{
+    animation: bounceInRight 1s forwards  ;
+}
+
+
+.loding{
+    animation: heartBeat 1s   ;  
+}
+
 

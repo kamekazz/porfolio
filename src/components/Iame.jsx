@@ -1,23 +1,34 @@
 import React, { Component } from 'react'
 import Slide from '@material-ui/core/Slide';
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 import Waypoint from 'react-waypoint';
 import history from '../../src/history'
+import * as actions from '../store/actions'
+
 
 
 class Iame extends Component {
 
     state={
         onViw:false,
-        card:'foteCard',
-        card2:'foteCard'
+    
     }
 
     componentDidMount(){
         setTimeout(() => {
+            this.goto()
+        }, 5000);  
+    }
+
+    goto=()=>{
+        this.props.acOFview(true)
+        setTimeout(() => {
             history.push('/aboutme')
-        }, 5000);
-        
+            this.props.acOFview(false)
+        }, 2000);
+        setTimeout(() => {
+            this.setState({open:false})
+        }, 500); 
     }
 
 
@@ -70,4 +81,10 @@ class Iame extends Component {
 
 
 
-export default Iame
+const mapStateToProps = (state) => ({
+    offView: state.nav.offView
+})
+
+
+
+export default connect(mapStateToProps, actions)(Iame)

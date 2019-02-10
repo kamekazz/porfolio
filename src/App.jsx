@@ -3,6 +3,10 @@ import './src/App.scss';
 import  Nav  from './components/Nav';
 import Loding from './components/Loding';
 // import App1 from './App.1';
+import { connect } from 'react-redux'
+import * as actions from './store/actions'
+import 'animate.css'
+
 
 const App1 = lazy(()=>  import('./App.1'))
 
@@ -28,16 +32,25 @@ class App extends Component {
   }
 
   render() {
+    const {offView} = this.props;
     return (
-      <div className="app">
+      <div>
         <Nav />
-        <Suspense fallback={<Loding />}>
+        <div className={offView ? 'app leve' : 'app bk'}>
+          <Suspense fallback={<Loding />}>
             <App1 />
-        </Suspense>
+          </Suspense>
+        </div>
+        {offView && <Loding /> }
       </div>
-
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  offView: state.nav.offView
+})
+
+
+
+export default connect(mapStateToProps, actions)(App)
