@@ -4,13 +4,16 @@ import Waypoint from 'react-waypoint';
 export default class aboutMe extends Component {
 
     state={
-        onViw:true,
+        onViw:false,
         card:'foteCard',
         card2:'foteCard'
     }
 
 
     componentDidMount(){
+        
+        this.setState({ onViw: true })
+   
 
     }
 
@@ -24,13 +27,7 @@ export default class aboutMe extends Component {
     const onViw = this.state.onViw
     return (
         <div id="aboutMe" className="aboutMe" >
-            <div className="mainConten">
-
-                {/* <Waypoint
-                    onEnter={() => this.setState({ onViw: true })}
-                    onLeave={() => this.setState({ onViw: false })}
-                /> */}
-                
+            <div className="mainConten">           
                 <figure className={`aboutMe__shape  ${this.state.card}`}>
                     <img src="ast/img/me.jpg" alt="Person on a tour" className="aboutMe__img" />
                 </figure>
@@ -46,18 +43,19 @@ export default class aboutMe extends Component {
                     <div onMouseOver={() => this.setState({ card: 'dd', card2: 'dd2' })} className="aboutMe__shape2--8"></div>
                     <div onMouseOver={() => this.setState({ card: 'dr', card2: 'dr2' })} className="aboutMe__shape2--9"></div>
                 </div> */}
-                <Slide direction="left" in={onViw} timeout={1000} >
+                <Slide direction="down" in={onViw} timeout={1000} >
                     <div className="heder__text">
                         <h3 className="heder__text--h3">About Me</h3>
                         <div className="line" />
                         <p className="heder-text--p">I consider myself a full-stack developer, and I am equally comfortable developing Node.js backends as working with JavaScript in the front-end. My technical expertise also includes React, Redux,  ES6, HTML5,CSS a bit of angular and some other frameworks.</p>
                     </div>
                 </Slide>
+                <Slide direction="down" in={onViw} timeout={1000} >
                 <div className="botumText">
                     <div className="l">
                         <div className="a-contanar">
                             <h4>Personal Info</h4>
-                            <Slide direction="right" in={onViw} timeout={1000} >
+                            <Slide direction="down" in={onViw} timeout={1000} >
                                 <div className="line2" />
                             </Slide>
                             <ul>
@@ -72,7 +70,7 @@ export default class aboutMe extends Component {
                     <div className="r">
                         <div className="b-contanar">
                             <h4>My Resume</h4>
-                            <Slide direction="right" in={onViw} timeout={1000} >
+                            <Slide direction="down" in={onViw} timeout={1000} >
                                 <div className="line2" />
                             </Slide>
                             <p>I can't wait to be part of your team</p>
@@ -83,8 +81,8 @@ export default class aboutMe extends Component {
                             </a>
                         </div>
                     </div>
-        
                 </div>
+                </Slide>
             </div>
         </div>
 
