@@ -15,9 +15,11 @@ class Iame extends Component {
     }
 
     componentDidMount(){
+        this.setState({onViw:true})
         setTimeout(() => {
             this.goto()
         }, 5000);  
+
     }
 
     goto=()=>{
@@ -30,6 +32,7 @@ class Iame extends Component {
             this.setState({open:false})
         }, 500); 
     }
+    
 
 
   render() {
@@ -62,10 +65,7 @@ class Iame extends Component {
                 </h1>
             </div>
         </Slide>
-        <Waypoint
-        onEnter={()=> this.setState({onViw:true})}
-        onLeave={()=> this.setState({onViw:false})}
-        />
+       
         <Slide direction="right" in={onViw} timeout={1000}  mountOnEnter unmountOnExit >
             <div className="gettouch--posich" >
                 <div onClick={this.props.goto}  className="gettouch btn">get in touch</div>
