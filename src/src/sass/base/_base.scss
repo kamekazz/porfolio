@@ -69,3 +69,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background:$color-primary-dark; 
 }
+
+.next{
+    animation-name: pulse;
+    animation-delay: 2s;
+}

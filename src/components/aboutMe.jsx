@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import Slide from '@material-ui/core/Slide';
-import Waypoint from 'react-waypoint';
-export default class aboutMe extends Component {
+import { connect } from 'react-redux'
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/KeyboardArrowRight';
+import * as actions from '../store/actions'
+import history from '../../src/history'
+
+class aboutMe extends Component {
 
     state={
         onViw:false,
@@ -16,6 +21,17 @@ export default class aboutMe extends Component {
    
 
     }
+
+    goto=(prLocation)=>{
+        this.props.acOFview(true)
+        setTimeout(() => {
+            history.push(prLocation)
+            this.props.acOFview(false)
+        }, 2000);
+        setTimeout(() => {
+            this.setState({open:false})
+        }, 500); 
+      }
 
     campioCard =()=>{
         this.setState({
@@ -84,15 +100,13 @@ export default class aboutMe extends Component {
                 </div>
                 </Slide>
             </div>
+            <Fab onClick={()=> this.goto('/skills')} color="secondary" className="next" aria-label="Add" >
+                <AddIcon style={{color:'white'}} />
+            </Fab>
         </div>
 
     )
   }
 }
 
-// "prop-types": "^15.6.2",
-
-// "react-dat-gui": "^1.0.2",
-
-// "react-fluid-animation": "link:..",
-// "react-github-corner": "^2.3.0"
+export default connect(null, actions)(aboutMe)

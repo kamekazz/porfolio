@@ -2,7 +2,22 @@
     position: relative;
     color: $color-grey-light-1;
     width: 100%;
+    height: 100vh;
     padding: 12px;
+
+
+    
+    
+    a{
+        margin-left: 24px;
+    }
+
+    .next{
+        position: sticky;
+        left:  90%;
+        bottom: 5%;
+        transform: scale(1.2);
+    }
 
     .mainConten {
         border-radius: 12px;
@@ -23,7 +38,11 @@
                 box-shadow: 0 1rem 2rem rgba($color-black, .2);
                 border-radius: 12px;
                 margin-bottom: 12px;
-                padding: 6px;
+                padding: 24px;
+
+                .nn{
+                    margin: 12px;
+                }
                 .top{
                     display: flex;
                     .sp{
@@ -37,7 +56,7 @@
                     }
                 }
                 .des{
-
+                  
                 }
                 p{
                     color: #526760;

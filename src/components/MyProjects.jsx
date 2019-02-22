@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-
 import { connect } from 'react-redux'
-
-import Slide from '@material-ui/core/Slide';
 import Chip from '@material-ui/core/Chip';
-import Waypoint from 'react-waypoint';
-
 import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/KeyboardArrowRight';
+import * as actions from '../store/actions'
+import history from '../../src/history'
+
+
+
 
 const data = [
   {title:'FioBook APP',des:'Is the Dominican Republic most of the people use credit and pay once a month so I created this PWA app to help small business manage account instead of writing everything in aNotebook . To use and demo this app please use this password: 123456 and user account name: TAVERAS78@GMAIL.COM .',code:'',fab:[{link:'https://github.com/kamekazz/fiobook-cli',icon:'fab fa-github'},{link:'https://colbook-0818.firebaseapp.com/login',icon:'fas fa-link'}],tec:['node js','angular','material','bootstrap','mongodb','PWA'],img:'ast/img/mony.jpg'},
@@ -19,7 +20,18 @@ export class MyProjects extends Component {
     onViw:false,
     card:'foteCard',
     card2:'foteCard'
-}
+  }
+
+  goto=(prLocation)=>{
+    this.props.acOFview(true)
+    setTimeout(() => {
+        history.push(prLocation)
+        this.props.acOFview(false)
+    }, 2000);
+    setTimeout(() => {
+        this.setState({open:false})
+    }, 500); 
+  }
 
   hp_doleClik = () =>{
     this.props.scrollToMyRef()
@@ -47,7 +59,7 @@ export class MyProjects extends Component {
               <h2>{item.title}</h2>
             </div>
             {item.fab.map(fabI => (
-              <a href={fabI.link} rel="noopener noreferrer" target="_blank"><Fab className="fab" color="primary"  >
+              <a href={fabI.link} key={fabI.icon} rel="noopener noreferrer" target="_blank"><Fab className="fab" color="primary"  >
                 <i style={{fontSize:'30px'}} className={fabI.icon}></i>
               </Fab>
               </a>
@@ -55,15 +67,17 @@ export class MyProjects extends Component {
           </div>
           
           <p className="des">{item.des}</p>
-          {item.tec.map(tecI => <Chip color="primary" label={tecI} />)}
+
+          {item.tec.map(tecI => <Chip key={tecI} className="nn" color="primary" label={tecI} />)}
           
         </div>
       ))
     )
-    const onViw = this.state.onViw
+    
 
     return (
       <div onScroll={this.activet} className="MyProjects">
+       
         <div className="mainConten">
 
           <div className="prolist">
@@ -72,6 +86,10 @@ export class MyProjects extends Component {
 
 
         </div>
+        <Fab onClick={() => this.goto('/clone')} color="secondary" className="next" aria-label="Add" >
+          <AddIcon style={{ color: 'white' }} />
+        </Fab>
+
       </div>
     )
   }
@@ -81,8 +99,6 @@ const mapStateToProps = (state) => ({
   
 })
 
-const mapDispatchToProps = {
-  
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(MyProjects)
+
+export default connect(mapStateToProps, actions)(MyProjects)

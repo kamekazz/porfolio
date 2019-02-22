@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import Slide from '@material-ui/core/Slide';
 import WorkIcon from '@material-ui/icons/Work';
-import TableSkills from './TableSkills';
 import 'animate.css'
-import Waypoint from 'react-waypoint';
+import { connect } from 'react-redux'
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/KeyboardArrowRight';
+import * as actions from '../store/actions'
+import history from '../../src/history'
 import App from '../v2/App';
 
 
@@ -13,6 +15,18 @@ import App from '../v2/App';
         card:'foteCard',
         card2:'foteCard'
     }
+
+    goto=(prLocation)=>{
+        this.props.acOFview(true)
+        setTimeout(() => {
+            history.push(prLocation)
+            this.props.acOFview(false)
+        }, 2000);
+        setTimeout(() => {
+            this.setState({open:false})
+        }, 500); 
+      }
+
   render() {
     const onViw = this.state.onViw
 
@@ -99,9 +113,13 @@ import App from '../v2/App';
                     <App />
                 </div>
             </div>
+            <Fab onClick={()=> this.goto('/myprojects')} color="secondary" className="next" aria-label="Add" >
+                <AddIcon style={{color:'white'}} />
+            </Fab>
         </div>
     )
   }
 }
 
-export default OutSkills
+
+export default connect(null, actions)(OutSkills)

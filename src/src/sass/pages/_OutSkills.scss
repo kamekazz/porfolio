@@ -2,6 +2,16 @@
     color: $color-grey-light-1;
     width: 100%;
     padding: 12px;
+    position: relative;
+    height: 100vh;
+
+    .next{
+        position: sticky;
+        left:  90%;
+        bottom: 5%;
+        transform: scale(1.2);
+    }
+
     .mainConten{
         border-radius: 12px;
         max-width:  1200px;
